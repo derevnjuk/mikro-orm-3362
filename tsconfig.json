@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "target": "ES6",
+    "lib": ["ESNext"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"],
+}

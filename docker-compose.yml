@@ -1,0 +1,21 @@
+version: '3.0'
+services:
+  mongo:
+    image: 'mongo:4.0'
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: 'test'
+      MONGO_INITDB_ROOT_PASSWORD: 'password'
+      MONGO_INITDB_ROOT_USERNAME: 'user'
+
+  postgresql:
+    image: 'postgres:12.2-alpine'
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: 'test'
+      POSTGRES_PASSWORD: 'password'
+      POSTGRES_USER: 'user'
+    volumes:
+      - './init-db.sql:/docker-entrypoint-initdb.d/init-db.sql'
